@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+</head>
+<body ng-app ="Sim-App"> 
+	<!-- The above command tells Angular JS which part of the html page is linked with  -->
+
+	<div ng-controller ="ViewControl">
+		<h2>Hello {{helloTo.title}} ! </h2>
+	</div>
+
+	Click Me :
+	<input type ="checkbox" ng-model="checked"></br>
+	<div>
+		
+		<div class ="animate" ng-show ="checked">
+			Yes ! you are good to go 
+		</div>
+
+		
+    </div>
+     
+	
+		<script>
+        	angular.module("Sim-App", [])
+        	.controller("ViewControl", function($scope){
+        	$scope.helloTo = {};
+            $scope.helloTo.title= "World, AngularJS" ;
+
+        	});
+
+		</script>
+
+
+</body>
+
+</html>
